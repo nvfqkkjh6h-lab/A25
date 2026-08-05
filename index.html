@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my text</title>
+
+  <!-- iOS用 「ホーム画面に追加」アイコン (SVG/Data URI) -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23111827'/%3E%3Cstop offset='100%25' stop-color='%231f2937'/%3E%3C/linearGradient%3E%3ClinearGradient id='txt' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300f2fe'/%3E%3Cstop offset='100%25' stop-color='%234facfe'/%3E%3C/linearGradient%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='0' dy='4' stdDeviation='8' flood-color='%2300f2fe' flood-opacity='0.4'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='512' height='512' rx='115' fill='url(%23bg)'/%3E%3Crect width='480' height='480' x='16' y='16' rx='100' fill='none' stroke='url(%23txt)' stroke-width='4' opacity='0.3'/%3E%3Ctext x='50%25' y='42%25' dominant-baseline='central' text-anchor='middle' fill='url(%23txt)' font-family='sans-serif' font-weight='900' font-size='110' filter='url(%23shadow)'%3Emy%3C/text%3E%3Ctext x='50%25' y='68%25' dominant-baseline='central' text-anchor='middle' fill='url(%23txt)' font-family='sans-serif' font-weight='900' font-size='110' filter='url(%23shadow)'%3Etext%3C/text%3E%3C/svg%3E">
+
+  <!-- Android/Chrome用 Manifest設定 (SVG/Data URI) -->
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22my%20text%22%2C%22short_name%22%3A%22my%20text%22%2C%22start_url%22%3A%22%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23111827%22%2C%22theme_color%22%3A%22%23111827%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20512%20512%27%253E%253Cdefs%253E%253ClinearGradient%20id%3D%27bg%27%20x1%3D%270%25%27%20y1%3D%270%25%27%20x2%3D%27100%25%27%20y2%3D%27100%25%27%253E%253Cstop%20offset%3D%270%25%27%20stop-color%3D%27%2523111827%27%2F%253E%253Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%25231f2937%27%2F%253E%253C%2FlinearGradient%253E%253ClinearGradient%20id%3D%27txt%27%20x1%3D%270%25%27%20y1%3D%270%25%27%20x2%3D%27100%25%27%20x2%3D%27100%25%27%253E%253Cstop%20offset%3D%270%25%27%20stop-color%3D%27%252300f2fe%27%2F%253E%253Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%25234facfe%27%2F%253E%253C%2FlinearGradient%253E%253Cfilter%20id%3D%27shadow%27%253E%253CfeDropShadow%20dx%3D%270%27%20dy%3D%274%27%20stdDeviation%3D%278%27%20flood-color%3D%27%252300f2fe%27%20flood-opacity%3D%270.4%27%2F%253E%253C%2Ffilter%253E%253C%2Fdefs%3E%3Crect%20width%3D%27512%27%20height%3D%27512%27%20rx%3D%27115%27%20fill%3D%27url(%2523bg)%27%2F%253E%253Crect%20width%3D%27480%27%20height%3D%27480%27%20x%3D%2716%27%20y%3D%2716%27%20rx%3D%27100%27%20fill%3D%27none%27%20stroke%3D%27url(%2523txt)%27%20stroke-width%3D%274%27%20opacity%3D%270.3%27%2F%253E%253Ctext%20x%3D%2750%25%27%20y%3D%2742%25%27%20dominant-baseline%3D%27central%27%20text-anchor%3D%27middle%27%20fill%3D%27url(%2523txt)%27%20font-family%3D%27sans-serif%27%20font-weight%3D%27900%27%20font-size%3D%27110%27%20filter%3D%27url(%2523shadow)%27%253Emy%253C%2Ftext%253E%253Ctext%20x%3D%2750%25%27%20y%3D%2768%25%27%20dominant-baseline%3D%27central%27%20text-anchor%3D%27middle%27%20fill%3D%27url(%2523txt)%27%20font-family%3D%27sans-serif%27%20font-weight%3D%27900%27%20font-size%3D%27110%27%20filter%3D%27url(%2523shadow)%27%253Etext%253C%2Ftext%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%7D">
+
+  <!-- Google AdSense 必須スクリプト (YOUR_PUBLISHER_IDを変更してください) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #111827;
+      color: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 32px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-size: 2.25rem;
+      font-weight: 900;
+      font-style: italic;
+      background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 12px rgba(0, 242, 254, 0.35));
+      letter-spacing: -0.02em;
+      user-select: none;
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* タブ切り替え */
+    .tabs {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid #374151;
+      padding-bottom: 10px;
+    }
+    .tab-btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      background: none;
+      color: #9ca3af;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background-color: #1f2937;
+      color: #00f2fe;
+    }
+
+    .tab-content { display: none; flex-direction: column; gap: 16px; }
+    .tab-content.active { display: flex; }
+
+    /* ステータスバー */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      background-color: #1f2937;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #374151;
+    }
+    .stat-item { display: flex; flex-direction: column; align-items: center; }
+    .stat-value { font-size: 1.5rem; font-weight: 700; color: #00f2fe; }
+    .stat-label { font-size: 0.75rem; color: #9ca3af; margin-top: 2px; }
+
+    /* エディタ ＆ 比較エリア */
+    .editor-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .editor-grid.two-cols { grid-template-columns: 1fr 1fr; }
+    }
+
+    textarea, .diff-output {
+      width: 100%;
+      min-height: 250px;
+      background-color: #1f2937;
+      border: 1px solid #374151;
+      border-radius: 12px;
+      padding: 16px;
+      color: #f3f4f6;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      resize: vertical;
+      outline: none;
+      font-family: monospace;
+    }
+    textarea:focus { border-color: #4facfe; }
+
+    /* 差分表示のハイライト */
+    .diff-output { white-space: pre-wrap; overflow-y: auto; background: #0d1117; }
+    .diff-add { background-color: rgba(46, 160, 67, 0.25); color: #7ee787; text-decoration: none; }
+    .diff-del { background-color: rgba(248, 81, 73, 0.25); color: #ff7b72; text-decoration: line-through; }
+
+    /* コントロール・ボタン群 */
+    .controls-panel {
+      background-color: #1f2937;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #374151;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      background-color: #111827;
+      border: 1px solid #374151;
+      border-radius: 6px;
+      padding: 8px 12px;
+      color: #fff;
+      outline: none;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: #374151;
+      color: #f3f4f6;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); color: #111827; }
+    .btn-danger { background-color: #991b1b; color: #fecaca; }
+
+    /* 一番下のGoogle AdSense枠 */
+    footer.adsense-footer {
+      width: 100%;
+      background-color: #0b0f17;
+      border-top: 1px solid #1f2937;
+      padding: 16px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: auto;
+    }
+    .ads-label { font-size: 0.75rem; color: #6b7280; margin-bottom: 8px; }
+    .ads-wrapper {
+      width: 100%;
+      max-width: 728px;
+      min-height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-logo">my text</div>
+  </header>
+
+  <main>
+    <!-- タブコントロール -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="editor">テキスト編集・整形</button>
+      <button class="tab-btn" data-tab="diff">テキスト比較 (Diff)</button>
+    </div>
+
+    <!-- タブ1: エディタ＆整形 -->
+    <div id="tab-editor" class="tab-content active">
+      <div class="stats-bar">
+        <div class="stat-item"><span class="stat-value" id="charCount">0</span><span class="stat-label">文字数</span></div>
+        <div class="stat-item"><span class="stat-value" id="wordCount">0</span><span class="stat-label">単語数</span></div>
+        <div class="stat-item"><span class="stat-value" id="lineCount">0</span><span class="stat-label">行数</span></div>
+      </div>
+
+      <textarea id="textInput" placeholder="テキストを入力してください...（自動保存されます）"></textarea>
+
+      <!-- 置換・整形操作 -->
+      <div class="controls-panel">
+        <input type="text" id="findText" placeholder="検索文字列">
+        <input type="text" id="replaceText" placeholder="置換文字列">
+        <button id="replaceBtn" class="btn">置換実行</button>
+        <button id="trimBtn" class="btn">空白除去</button>
+        <button id="cleanLinesBtn" class="btn">空行削除</button>
+        <button id="copyBtn" class="btn btn-primary" style="margin-left: auto;">コピー</button>
+        <button id="clearBtn" class="btn btn-danger">クリア</button>
+      </div>
+    </div>
+
+    <!-- タブ2: テキスト比較 -->
+    <div id="tab-diff" class="tab-content">
+      <div class="editor-grid two-cols">
+        <div>
+          <label style="font-size:0.85rem; color:#9ca3af; margin-bottom:6px; display:block;">元のテキスト (Text A)</label>
+          <textarea id="textA" placeholder="比較元のテキストを入力"></textarea>
+        </div>
+        <div>
+          <label style="font-size:0.85rem; color:#9ca3af; margin-bottom:6px; display:block;">変更後のテキスト (Text B)</label>
+          <textarea id="textB" placeholder="比較対象のテキストを入力"></textarea>
+        </div>
+      </div>
+
+      <button id="compareBtn" class="btn btn-primary">差分を比較する</button>
+
+      <label style="font-size:0.85rem; color:#9ca3af; margin-top:10px; display:block;">比較結果:</label>
+      <div id="diffOutput" class="diff-output">ここに比較結果が表示されます</div>
+    </div>
+  </main>
+
+  <!-- 最下部 Google AdSenseエリア -->
+  <footer class="adsense-footer">
+    <div class="ads-label">スポンサーリンク</div>
+    <div class="ads-wrapper">
+      <ins class="adsbygoogle"
+           style="display:block; width:100%;"
+           data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+           data-ad-slot="YOUR_AD_SLOT_ID"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- タブ切り替え処理 ---
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          btn.classList.add('active');
+          document.getElementById(`tab-${btn.dataset.tab}`).classList.add('active');
+        });
+      });
+
+      // --- エディタ & カウント機能 ---
+      const textInput = document.getElementById('textInput');
+      const charCount = document.getElementById('charCount');
+      const wordCount = document.getElementById('wordCount');
+      const lineCount = document.getElementById('lineCount');
+
+      const saved = localStorage.getItem('my_text_app_data');
+      if (saved !== null) { textInput.value = saved; updateStats(); }
+
+      textInput.addEventListener('input', () => {
+        updateStats();
+        localStorage.setItem('my_text_app_data', textInput.value);
+      });
+
+      function updateStats() {
+        const text = textInput.value;
+        charCount.textContent = text.length;
+        const words = text.trim() ? text.trim().split(/\s+/) : [];
+        wordCount.textContent = words.length;
+        lineCount.textContent = text ? text.split('\n').length : 0;
+      }
+
+      // 置換・整形ボタン
+      document.getElementById('replaceBtn').addEventListener('click', () => {
+        const find = document.getElementById('findText').value;
+        const replace = document.getElementById('replaceText').value;
+        if (!find) return;
+        textInput.value = textInput.value.replaceAll(find, replace);
+        updateStats();
+      });
+
+      document.getElementById('trimBtn').addEventListener('click', () => {
+        textInput.value = textInput.value.split('\n').map(l => l.trim()).join('\n');
+        updateStats();
+      });
+
+      document.getElementById('cleanLinesBtn').addEventListener('click', () => {
+        textInput.value = textInput.value.split('\n').filter(l => l.trim() !== '').join('\n');
+        updateStats();
+      });
+
+      document.getElementById('copyBtn').addEventListener('click', () => {
+        navigator.clipboard.writeText(textInput.value);
+        alert('コピーしました！');
+      });
+
+      document.getElementById('clearBtn').addEventListener('click', () => {
+        if (confirm('クリアしますか？')) {
+          textInput.value = '';
+          updateStats();
+          localStorage.removeItem('my_text_app_data');
+        }
+      });
+
+      // --- 簡易テキスト比較 (Diff) ロジック ---
+      document.getElementById('compareBtn').addEventListener('click', () => {
+        const a = document.getElementById('textA').value.split('\n');
+        const b = document.getElementById('textB').value.split('\n');
+        const output = document.getElementById('diffOutput');
+        
+        let resultHtml = '';
+        const max = Math.max(a.length, b.length);
+
+        for (let i = 0; i < max; i++) {
+          const lineA = a[i];
+          const lineB = b[i];
+
+          if (lineA === lineB) {
+            if (lineA !== undefined) resultHtml += `  ${escapeHtml(lineA)}\n`;
+          } else {
+            if (lineA !== undefined) resultHtml += `<span class="diff-del">- ${escapeHtml(lineA)}</span>\n`;
+            if (lineB !== undefined) resultHtml += `<span class="diff-add">+ ${escapeHtml(lineB)}</span>\n`;
+          }
+        }
+        output.innerHTML = resultHtml || '差分はありません';
+      });
+
+      function escapeHtml(str) {
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      }
+
+      // AdSense初期化
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {}
+    });
+  </script>
+</body>
+</html>
